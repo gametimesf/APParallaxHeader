@@ -305,7 +305,7 @@ static char UIScrollViewParallaxView;
         // Correct the scroll indicator position
         // Without this the scroll indicator will be displayed on top of the parallax view
         if (self.scrollView.contentOffset.y < -self.parallaxHeight) {
-            [self.scrollView setScrollIndicatorInsets:UIEdgeInsetsMake(self.scrollView.contentInset.top+(abs(self.scrollView.contentOffset.y)-self.parallaxHeight), 0, 0, 0)];
+            [self.scrollView setScrollIndicatorInsets:UIEdgeInsetsMake(self.scrollView.contentInset.top+(fabs(self.scrollView.contentOffset.y)-self.parallaxHeight), 0, 0, 0)];
         }
         else {
             [self.scrollView setScrollIndicatorInsets:UIEdgeInsetsMake(self.scrollView.contentInset.top, 0, 0, 0)];
